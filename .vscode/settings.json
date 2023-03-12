@@ -3,6 +3,7 @@
         "CRGB",
         "gifs",
         "LEDS",
+        "Lindley",
         "millis"
     ]
 }

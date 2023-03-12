@@ -6,7 +6,7 @@
  * Written by: Craig A. Lindley
  */
 
-#include "FilenameFunctions.h"
+#include "filenameFunctions.h"
 
 #include <SD.h>
 
@@ -49,9 +49,9 @@ bool isAnimationFile(const char filename []) {
 
 #if defined(ESP32)
     // ESP32 filename includes the full path, so need to remove the path before looking at the filename
-    int pathindex = filenameString.lastIndexOf("/");
-    if(pathindex >= 0)
-        filenameString.remove(0, pathindex + 1);
+    int pathIndex = filenameString.lastIndexOf("/");
+    if(pathIndex >= 0)
+        filenameString.remove(0, pathIndex + 1);
 #endif
 
     if ((filenameString[0] == '_') || (filenameString[0] == '~') || (filenameString[0] == '.')) {
@@ -161,7 +161,6 @@ int openGifFilenameByIndex(const char *directoryName, int index) {
 
     return 0;
 }
-
 
 // Return a random animated gif path/filename from the specified directory
 void chooseRandomGIFFilename(const char *directoryName, char *pnBuffer) {
